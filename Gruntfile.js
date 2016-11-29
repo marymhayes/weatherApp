@@ -13,10 +13,13 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Automatically load required Grunt tasks
+
+  // Modified to add buildcontrol
   require('jit-grunt')(grunt, {
-    useminPrepare: 'grunt-usemin',
-    ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+      useminPrepare: 'grunt-usemin',
+      ngtemplates: 'grunt-angular-templates',
+      cdnify: 'grunt-google-cdn',
+      buildcontrol: 'grunt-build-control'
   });
 
   // Configurable paths for the application
@@ -30,6 +33,22 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
+
+// Added buildcontrol task object
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:marymhayes/weatherApp.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
