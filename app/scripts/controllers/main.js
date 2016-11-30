@@ -7,16 +7,14 @@
  * # MainCtrl
  * Controller of the weatherAppApp
  */
-angular.module('weatherAppApp')
+ angular.module('weatherAppApp')
+   .controller('MainCtrl', function ($scope, citysearch) {
+     $scope.citiesFound = citysearch.find();
 
-// Replaced controller info
-.controller('MainCtrl', function ($scope, current) {
-  $scope.current = current.query();
-
-// Added $scope.refresh
-$scope.refreshCurrent = function(){
-    $scope.current = current.query({
-        location: $scope.location
-    });
-};
-});
+     $scope.findCities = function(){
+         $scope.citiesFound = citysearch.find({
+             query: $scope.location
+         });
+         $scope.searchQuery = $scope.location;
+     };
+   });
