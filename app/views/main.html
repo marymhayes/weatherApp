@@ -1,7 +1,7 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <h1>Select Your City</h1>
   <p class="lead">
-    <div ng-init="location='Seattle'">
+    <div ng-init="location=''">
         <p>
           <label for="location">Location:
             <input type="text" name="location" ng-model="location">
@@ -20,6 +20,14 @@
         <dd>{{city.main.temp}} &deg;F</dd>
         <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
       </dl>
+    </div>
+    <div ng-if="storage.savedCities">
+      <h2>Saved Cities</h2>
+      <ul class="saved-cities-list">
+        <li ng-repeat="city in storage.savedCities">
+          <a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
+        </li>
+      </ul>
     </div>
   </p>
 </div>

@@ -16,6 +16,7 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
+    'ngStorage', // added to enable localStorage features
     'ngSanitize',
     'ngTouch'
   ])
