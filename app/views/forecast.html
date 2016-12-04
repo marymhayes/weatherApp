@@ -1,10 +1,52 @@
-<h1>16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
-<dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
-    <dt>Forecast for {{weather.dt*1000 | date:'MMM dd, yyyy'}}</dt>
-    <dd>{{prediction.weather[0].main}}</dd>
-    <dd>{{prediction.weather[0].description}}</dd>
-    <dt>Temperature</dt>
-    <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
-</dl>
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
 
-<p><a ng-href="/#/current/{{cityID}}" class="btn btn-lg btn-primary">View Current Weather</a></p>
+  <!--Top Row: Title -->
+<div class="container-fluid" id="currentcity">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h2>16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h2>
+    </div>
+  </div>
+</div>
+
+  <!--Second Row: Forecast Results -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0" id="pillar">
+    </div>
+
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="forecastresults">
+      <dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
+        <dt>Forecast for {{weather.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+        <dd>{{prediction.weather[0].main}}</dd>
+        <dd>{{prediction.weather[0].description}}</dd>
+        <dt>Temperature</dt>
+        <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
+      </dl>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0" id="pillar">
+    </div>
+
+  </div>
+</div>
+
+<!--Third Row: Current Weather Button -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="forecast">
+      <p><a ng-href="/#/current/{{cityID}}" class="btn btn-lg btn-primary" id="forecastbutton">View Current Weather</a></p>
+    </div>
+  </div>
+</div>
+
+<!--Fourth Row: Home Button -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="home">
+      <p><a ng-href="#/" class="btn btn-lg btn-primary" id="homebutton">Home</a></p>
+    </div>
+  </div>
+</div>
+
+</div> <!--end jumbotron -->
