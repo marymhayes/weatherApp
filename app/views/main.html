@@ -1,55 +1,54 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
 
-
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12"  id="textfield">
-      <h2>SELECT YOUR CITY</h2>
-      <p class="lead">
+<!--Top Row: Input Field and Find Button -->
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12"  id="textfield">
+    <h2>SELECT YOUR CITY</h2>
+    <p class="lead">
       <div ng-init="location='Seattle'">
-        <p>
+      <p>
         <label for="location">Location:
           <input type="text" name="location" ng-model="location" id="text">
         </label>
       </p>
       </div>
-      </div>
+    </div>
 
   <div class= "col-lg-5 col-md-5 col-sm-5 col-xs-12" id="findbutton">
-        <button class="btn btn-lg btn-primary" ng-click="findCities()">FIND CITY</button>
+    <button class="btn btn-lg btn-primary" ng-click="findCities()">FIND CITY</button>
     </div>
-  </div>
-  </div>
-
-  <div class="container-fluid" id="intro">
-    <div class="row">
-        <div class="apps">
-
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-            <img class="app" src="/images/sunny.png" alt="Line drawn weather icon">
-            <img class="app" src="/images/cloudy.png" alt="Line drawn layered cloud weather icon">
-            <img class="app" src="/images/rainy.png" alt="Line drawn umbrella with rain drops weather icon">
-            <img class="app" src="/images/stormy.png" alt="Line drawn lightning weather icon">
-            <img class="app" src="/images/windy.png" alt="Line drawn wind weather icon">
-        </div>
-      </div>
   </div>
 </div>
 
+<!--Second Row: Icon Animation -->
+<div class="container-fluid" id="intro">
+  <div class="row">
+  <div class="apps">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <img class="app" src="/images/sunny.png" alt="Line drawn weather icon">
+      <img class="app" src="/images/cloudy.png" alt="Line drawn layered cloud weather icon">
+      <img class="app" src="/images/rainy.png" alt="Line drawn umbrella with rain drops weather icon">
+      <img class="app" src="/images/stormy.png" alt="Line drawn lightning weather icon">
+      <img class="app" src="/images/windy.png" alt="Line drawn wind weather icon">
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="container-fluid">
-    <div class="row" ng-if="searchQuery">
-      <dl ng-repeat="city in citiesFound.list">
-      <div class= "col-lg-5 col-md-5 col-sm-5 col-xs-12" id="citylist">
-        <dt>{{city.name}}, {{city.sys.country}}</dt>
-        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+<!--Third Row: Search Results and View Weather Button -->
+<div class="container-fluid">
+  <div class="row" ng-if="searchQuery">
+    <dl ng-repeat="city in citiesFound.list">
+    <div class= "col-lg-5 col-md-5 col-sm-5 col-xs-12" id="citylist">
+      <dt>{{city.name}}, {{city.sys.country}}</dt>
+      <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
       </div>
 
-      <div class= "col-lg-7 col-md-7 col-sm-7 col-xs-12" id="result">
-        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary" id="resultbutton">View Weather</a></dd>
+    <div class= "col-lg-7 col-md-7 col-sm-7 col-xs-12" id="result">
+      <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary" id="resultbutton">View Weather</a></dd>
       </div>
-      </dl>
+    </dl>
     </div>
 
 </div>
