@@ -3,7 +3,7 @@
 
   <div class="container-fluid">
     <div class="row">
-    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-9"  id="textfield">
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12"  id="textfield">
       <h2>SELECT YOUR CITY</h2>
       <p class="lead">
       <div ng-init="location='Seattle'">
@@ -15,7 +15,7 @@
       </div>
       </div>
 
-  <div class= "col-lg-5 col-md-5 col-sm-5 col-xs-9" id="findbutton">
+  <div class= "col-lg-5 col-md-5 col-sm-5 col-xs-12" id="findbutton">
         <button class="btn btn-lg btn-primary" ng-click="findCities()">FIND CITY</button>
     </div>
   </div>
@@ -46,8 +46,8 @@
         <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
       </div>
 
-      <div class= "col-lg-7 col-md-7 col-sm-7 col-xs-12" id="resultbutton">
-        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary" id="result">View Weather</a></dd>
+      <div class= "col-lg-7 col-md-7 col-sm-7 col-xs-12" id="result">
+        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary" id="resultbutton">View Weather</a></dd>
       </div>
       </dl>
     </div>

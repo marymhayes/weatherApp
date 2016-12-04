@@ -24,17 +24,7 @@ body {
   background-color: #e7e7e7;
 }
 
-/* Background styling */
-#intro {
-  background-color: #00a58d;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/*
-* Inspired by: https://dribbble.com/shots/1878348-Google-Now-3rd-Party-Apps
-*/
-
+/* Animation adapted from: https://dribbble.com/shots/1878348-Google-Now-3rd-Party-Apps */
 @keyframes slide {
     0%  {
         transform: scale(0, 0) translateY(0);
@@ -106,6 +96,13 @@ body {
     }
     }
 
+/* Main View Divs */
+#intro {
+  background-color: #00a58d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #textfield {
   background-color: #c8cc81;
   height: 145px;
@@ -122,6 +119,86 @@ body {
   min-height: 125px;
   background-color: #43225e;
   padding-top: 45px;
+}
+
+
+
+/* Global and Local View Button effects */
+.btn {
+    background: rgba(255, 255, 255, 0.07);
+    width: 80%;
+    letter-spacing: 2px;
+  }
+
+.btn:hover {
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#findbutton {
+  background-color: #006294;
+  padding: 49.5px 48px;
+}
+#result {
+  min-height: 125px;
+  background-color: #ba1a64;
+  padding-top: 45px;
+}
+#resultbutton {
+  background: rgba(255, 255, 255, 0.07);
+  width: 80%;
+  letter-spacing: 2px;
+  border: none;
+}
+
+/* Current View Divs */
+
+#currentcity {
+  background-color: #c8cc81;
+  height: 145px;
+  padding-top: 35px;
+}
+
+#currentweather {
+  background-color: #00a58d;
+  min-height: 245px;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+#tempicon {
+  background-color: #006294;
+  min-height: 255px;
+  padding-top: 45px;
+}
+
+#forecast {
+  min-height: 125px;
+  background-color: #ba1a64;
+  padding-top: 45px;
+}
+
+#forecastbutton{
+  background: rgba(255, 255, 255, 0.07);
+  width: 80%;
+  letter-spacing: 2px;
+  border: none;
+}
+
+/* Global, Multiview */
+
+/* Main marketing message and sign up button */
+.navbar {
+  background-color: white;
+}
+.navbar:hover {
+  background-color: white;
+}
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: white;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -155,47 +232,6 @@ body {
 
 .container-narrow > hr {
   margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.navbar {
-  background-color: white;
-}
-.navbar:hover {
-  background-color: white;
-}
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: white;
-}
-
-  .btn {
-    background: rgba(255, 255, 255, 0.07);
-    width: 80%;
-    letter-spacing: 2px;
-  }
-
-  .btn:hover {
-    border-radius: 6px;
-    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .08);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-#findbutton {
-  background-color: #006294;
-  padding: 49.5px 48px;
-}
-#resultbutton {
-  min-height: 125px;
-  background-color: #ba1a64;
-  padding-top: 45px;
-}
-#result {
-  background: rgba(255, 255, 255, 0.07);
-  width: 80%;
-  letter-spacing: 2px;
-  border: none;
 }
 
 /* Supporting marketing content */

@@ -1,13 +1,16 @@
+<div class="container-fluid" id="currentcity">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <h1>Current Weather for {{currentWeather.name}}</h1>
-<!-- TO DELETE <p ng-if="!citySaved"><button class="btn btn-sm btn-primary" ng-click="saveCity(currentWeather)">Save City</button></p>
-<div ng-messages="citySaved">
-    <p class="city-saved-alert bg-success text-success" ng-message="success">
-        {{currentWeather.name}} has been saved to your list of cities.
-    </p>
-    <p class="city-saved-alert bg-warning text-warning" ng-message="duplicate">
-        {{currentWeather.name}} has already been saved to your list of cities.
-    </p>
-</div>-->
+</div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"  id="currentweather">
 <dl>
     <dt>Currently</dt>
     <dd>{{currentWeather.weather[0].main}}</dd>
@@ -19,5 +22,20 @@
     <dt>Clouds</dt>
     <dd>{{currentWeather.clouds.all}}%</dd>
 </dl>
+</div>
 
-<p><a ng-href="/#/forecast/{{cityID}}" class="btn btn-lg btn-primary">View 16-day Forecast</a></p>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"  id="tempicon">
+Graphic
+</div>
+
+
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="forecast">
+<p><a ng-href="/#/forecast/{{cityID}}" class="btn btn-lg btn-primary" id="forecastbutton">View 16-day Forecast</a></p>
+  </div>
+  </div>
+</div>
