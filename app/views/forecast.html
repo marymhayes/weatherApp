@@ -17,7 +17,7 @@
 
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="forecastresults">
       <dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
-        <dt>Forecast for {{weather.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+        <dt>Forecast for <!--{{weather.dt*1000 | date:'MMM dd, yyyy'}}--></dt>
         <dd>{{prediction.weather[0].main}}</dd>
         <dd>{{prediction.weather[0].description}}</dd>
         <dt>Temperature</dt>
@@ -25,7 +25,7 @@
       </dl>
     </div>
 
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0" id="pillar">
+    <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0" id="pillar">
     </div>
 
   </div>
